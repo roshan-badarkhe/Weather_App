@@ -116,21 +116,25 @@ const Weather = () => {
           </button>
         </div>
       </form>
-      <div className="city_name">{current.name}</div>
-      <div className="indicator">
-        <img src={current.icon} alt="indicator"></img>
-      </div>
-      <div className="temperature">{current.temp} °C</div>
-      <div className="data">
-        <div className="element">
-          <img src={humidity} alt="humidity"></img>
-          <div className="humidity_data"> {current.humidity}% Humidity</div>
+      {
+        <div>
+          <div className="city_name">{current.name}</div>
+          <div className="indicator">
+            <img src={current.icon} alt="indicator"></img>
+          </div>
+          <div className="temperature">{current.temp} °C</div>
+          <div className="data">
+            <div className="element">
+              <img src={humidity} alt="humidity"></img>
+              <div className="humidity_data"> {current.humidity}% Humidity</div>
+            </div>
+            <div className="element">
+              <img src={wind} alt="wind"></img>
+              <div className="wind_data">{current.speed} km/h Wind</div>
+            </div>
+          </div>
         </div>
-        <div className="element">
-          <img src={wind} alt="wind"></img>
-          <div className="wind_data">{current.speed} km/h Wind</div>
-        </div>
-      </div>
+      }
     </div>
   );
 };
